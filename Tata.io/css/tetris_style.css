@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    background-color:seashell;
 }
 
 ul {
@@ -22,12 +23,12 @@ body{
     background: rgba(0,0,0,0.7);
     left: 0;
     top: 0;
-    color: #fff;
+    color: black;
     font-size: 50px;
 }
 .game-text > button {
     padding: 0.5rem 1rem;
-    color:#fff;
+    color:black;
     background: salmon;
     border: none;
     cursor: pointer;
