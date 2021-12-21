@@ -1,5 +1,141 @@
+@font-face{
+    font-family:abster;
+    src:url(../font/abster-webfont.woff) format('woff');
+}
+
 *{
     margin: 0;
     padding: 0;
-    background-color: cornsilk;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(../images/christmas.jpg);
+}
+
+.container .header{
+    width: 80%;
+    height: 80px;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .header h1 a{
+    text-decoration: none;
+    color:white;
+    font-family:abster;
+}
+
+.container .nav ul li{
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.container .nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.container .nav ul li a:hover{
+    color: #1fdfdf
+}
+
+.container .hero{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container .hero h2{
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.container .hero p{
+    font-size: 22px;
+}
+
+.container .hero button{
+    background: none;
+    border:2px solid darkseagreen;
+    color:white;
+    padding: 15px 20px;
+    border-radius: 20px;
+    margin-top: 30px;
+    outline: none;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.container .hero button:hover{
+    background-color: darkslategray;
+}
+
+body{
+    height: 100vh;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f);
+    overflow: hidden;
+}
+
+.container .snow{
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    animation: snow 10s linear infinite;
+}
+
+.container .snow:nth-of-type(2n)
+{
+    width: 7px;
+    height: 7px;
+    animation-duration: 7s;
+    animation-delay: 1s;
+}
+
+.container .snow:nth-of-type(2n+1)
+{
+    animation-duration: 8s;
+    animation-delay: 2s;
+}
+
+.container .snow:nth-of-type(9n)
+{
+    animation-duration: 9s;
+    animation-delay: 3s;
+}
+
+@keyframes snow {
+    0%{
+        opacity:0;
+        transform: translateY(0);
+    }
+    20%{
+        opacity:1;
+        transform: translate(-15px,20vh);
+    }
+    40%{
+        opacity:1;
+        transform: translate(15px,40vh);
+    }
+    60%{
+        opacity:1;
+        transform: translate(-15px,60vh);
+    }
+    80%{
+        opacity:1;
+        transform: translate(0,80vh);
+    }
+    100%{
+        opacity:1;
+        transform: translateY(100vh);
+    }
 }

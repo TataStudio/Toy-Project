@@ -8,7 +8,42 @@
     <link href="css/index_style.css" rel="stylesheet">
 </head>
 <body>
-    <a href="SubHTML/tetris.html">Tetris</a></br>
-    <a href="SubHTML/landingpage.html">Landing Page</a>
+    <div class="container" id="con">
+        <div class="header">
+            <h1><a href="#">TATA . IO</a></h1>
+            <div class="nav">
+                <ul>
+                    <li><a href="SubHTML/tetris.html">TETRIS</a></li>
+                    <li><a href="SubHTML/landingpage.html">LANDING</a></li>
+                    <li><a href="#">CALCULATOR</a></li>
+                    <li><a href="#">BACKYARD</a></li>
+                    <li><a href="#">KITCHEN</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="hero">
+            <h2>Christmas</h2>
+            <p>Jingle bell, Jingle bell, Jingle bell rock </p>
+            <button>INFO MORE</button>
+        </div>
+    </div>
+    <script>
+        function createSnow(){
+            const el = document.createElement("div");
+            el.classList.add('snow');
+            el.style.marginLeft = randomPosition() + 'px';
+            document.body.appendChild(el);
+            document.getElementById("con").appendChild(el);
+        }
+
+        function randomPosition(){
+            return Math.floor(Math.random() * window.innerWidth);
+        }
+
+        for(let i=0;i<300;i++)
+        {
+            createSnow();
+        }
+    </script>
 </body>
 </html>
